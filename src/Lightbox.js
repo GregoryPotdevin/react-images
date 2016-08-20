@@ -1,6 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react'
 import { css, StyleSheet } from 'aphrodite/no-important';
 // import Swipeable from 'react-swipeable';
+
+const PropTypes = React.PropTypes
 
 import utils from './utils';
 import theme from './theme';
@@ -15,7 +17,7 @@ import styles from './styles/default';
 
 const classes = StyleSheet.create(styles);
 
-class Lightbox extends Component {
+class Lightbox extends React.Component {
 	static theme (themeStyles) {
 		const extStyles = Object.assign({}, styles);
 		for (const key in extStyles) {

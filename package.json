@@ -1,48 +1,44 @@
 {
-  "name": "react-images",
+  "name": "react-images-fork",
   "version": "0.4.11",
   "description": "A simple, responsive lightbox component for displaying an array of images with React.js",
-  "main": "lib/Lightbox.js",
+  "main": "lib/index.js",
+  "jsnext:main": "es/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && npm clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test",
+    "test:coverage": "nwb test --coverage",
+    "test:watch": "nwb test --server"
+  },
+  "dependencies": {
+    "aphrodite": "^0.5.0",
+    "react-addons-css-transition-group": "^15.3.0"
+  },
+  "peerDependencies": {
+    "react": "^0.14 || ^15.0"
+  },
+  "devDependencies": {
+    "nwb": "0.12.x",
+    "nwb-less": "^0.5.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
   "author": "Joss Mackison",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/jossmac/react-images.git"
   },
-  "dependencies": {
-    "aphrodite": "^0.5.0",
-    "react-addons-css-transition-group": "^15.3.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^6.0.4",
-    "babel": "^6.5.2",
-    "eslint-config-keystone": "2.2.0",
-    "eslint-plugin-react": "5.1.1",
-    "eslint": "2.9.0",
-    "gulp": "^3.9.0",
-    "react-component-gulp-tasks": "^0.7.0",
-    "react-dom": "^15.3.0",
-    "react": "^15.3.0"
-  },
-  "peerDependencies": {
-    "react-dom": "^0.14 || ^15.0",
-    "react": "^0.14 || ^15.0"
-  },
-  "browserify-shim": {
-    "react": "global:React"
-  },
-  "scripts": {
-    "build": "gulp clean && NODE_ENV=production gulp build",
-    "bump": "gulp bump",
-    "bump:major": "gulp bump:major",
-    "bump:minor": "gulp bump:minor",
-    "examples": "gulp dev:server",
-    "lint": "eslint src/** examples/src/app.js examples/src/components/Gallery.js",
-    "publish:examples": "gulp publish:examples",
-    "release": "gulp release",
-    "start": "gulp dev",
-    "watch": "gulp watch:lib"
-  },
+  "homepage": "http://jossmac.github.io/react-images/",
   "bugs": {
     "url": "https://github.com/jossmac/react-images/issues"
   },

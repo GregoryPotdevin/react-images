@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Lightbox from 'react-images';
+import Lightbox from '../../../src';
 import DownloadButton from './DownloadButton';
 
 class Gallery extends Component {
